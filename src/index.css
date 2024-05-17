@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  background-color: #f1f6f9;
+}
+
+@layer utilities {
+  .max-container {
+    @apply mx-auto max-w-[1440px];
+  }
+
+  .padding-container {
+    @apply px-6 lg:px-20 3xl:px-5;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .btn_hero {
+    @apply mt-10 rounded-[200px] border-2 border-navy-blue bg-off-white px-[25px] py-[10px] text-[14px] font-bold md:text-[18px] xl:mt-[130px];
+  }
+
+  .btn_destination {
+    @apply rounded-[300px] border border-light-orange bg-off-white px-[15px] py-[4px] text-sm text-navy-blue duration-300 ease-in-out hover:bg-light-orange hover:text-off-white lg:text-xs xl:text-sm;
+  }
+
+  .btn_newsletter_sm {
+    @apply flex justify-center rounded-[200px] bg-navy-blue-dark px-[10px] py-[15px] font-bold text-off-white shadow-md hover:-translate-y-1 hover:shadow-navy-blue-dark xs:hidden;
+  }
+
+  .btn_newsletter_xs {
+    @apply absolute right-2 top-[7.5px] hidden rounded-[200px] bg-navy-blue-dark px-[25px] py-[15px] font-bold text-off-white shadow-md hover:-translate-x-1 hover:shadow-navy-blue-dark xs:block;
+  }
+
+  .btn_contact {
+    @apply rounded-[200px] bg-light-orange px-[25px] py-[10px] text-[14px] font-medium text-off-white shadow-sm hover:-translate-y-1 hover:shadow-light-orange;
+  }
+}
